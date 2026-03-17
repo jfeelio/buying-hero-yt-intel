@@ -57,19 +57,6 @@ async function renderOverview() {
 
     <div class="section grid-2">
       <div class="card">
-        <div class="card-title"><span class="icon">📞</span> Top Acquisition Scripts</div>
-        <p style="font-size:11px;color:var(--text3);margin-bottom:12px;">Click any line to copy to clipboard</p>
-        ${renderScriptList(acqLines, false)}
-      </div>
-      <div class="card">
-        <div class="card-title"><span class="icon">💰</span> Top Disposition Scripts</div>
-        <p style="font-size:11px;color:var(--text3);margin-bottom:12px;">Click any line to copy to clipboard</p>
-        ${renderScriptList(dispoLines, true)}
-      </div>
-    </div>
-
-    <div class="section grid-2">
-      <div class="card">
         <div class="card-title"><span class="icon">💡</span> Evergreen Lessons</div>
         ${renderLessonList(lessons)}
       </div>
@@ -84,6 +71,19 @@ async function renderOverview() {
             ${renderChannelActivity(channels)}
           </div>
         ` : ''}
+      </div>
+    </div>
+
+    <div class="section grid-2">
+      <div class="card">
+        <div class="card-title"><span class="icon">📞</span> Top Acquisition Scripts</div>
+        <p style="font-size:11px;color:var(--text3);margin-bottom:12px;">Click any line to copy to clipboard</p>
+        ${renderScriptList(acqLines, false)}
+      </div>
+      <div class="card">
+        <div class="card-title"><span class="icon">💰</span> Top Disposition Scripts</div>
+        <p style="font-size:11px;color:var(--text3);margin-bottom:12px;">Click any line to copy to clipboard</p>
+        ${renderScriptList(dispoLines, true)}
       </div>
     </div>
   `;
