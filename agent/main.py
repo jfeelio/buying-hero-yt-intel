@@ -58,8 +58,15 @@ def main():
         ch['id'] = channel_id
 
         print(f"  Checking: {ch['name']} ({channel_id})")
-        videos = fetch_recent_videos(service, channel_id, ch['name'],
-                                     uploads_playlist_id=ch.get('uploads_playlist_id'))
+        try:
+            videos = fetch_recent_videos(service, channel_id, ch['name'],
+                                         uploads_playlist_id=ch.get('uploads_playlist_id'))
+        except Exception as e:
+            if 'quotaExceeded' in str(e) or '403' in str(e):
+                print(f"  [STOP] YouTube API quota exhausted. Saving partial results.")
+                break
+            print(f"  [WARN] Skipping {ch['name']}: {e}")
+            continue
         new_videos = [
             v for v in videos
             if is_new(v['video_id'], v['published_at'], seen_ids)
@@ -86,10 +93,13 @@ def main():
         video['transcript_available'] = available
 
         if not available:
-            print(f"    [SKIP] No transcript available")
-            # Still mark as seen so we don't retry tomorrow
-            seen_ids.add(vid_id)
-            continue
+            description = video.get('description', '').strip()
+            if not description or len(description) < 100:
+                print(f"    [SKIP] No transcript and no useful description")
+                seen_ids.add(vid_id)
+                continue
+            print(f"    [INFO] No transcript — analyzing description ({len(description)} chars)")
+            transcript = f"[Video description only — no transcript available]\n\n{description}"
 
         insights = analyze_video(video['title'], video['channel'], transcript, call_number=claude_calls)
         claude_calls += 1

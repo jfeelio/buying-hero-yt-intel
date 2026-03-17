@@ -70,11 +70,32 @@ def fetch_recent_videos(service, channel_id, channel_name, hours_back=48,
     videos = []
     try:
         # Step 2: Fetch most recent items from uploads playlist (1 quota unit)
-        resp = service.playlistItems().list(
-            part='snippet',
-            playlistId=pid,
-            maxResults=10
-        ).execute()
+        try:
+            resp = service.playlistItems().list(
+                part='snippet',
+                playlistId=pid,
+                maxResults=10
+            ).execute()
+        except HttpError as e:
+            if e.resp.status == 404:
+                # Derived UC→UU playlist ID doesn't work for this channel — look it up
+                print(f"    [INFO] Playlist not found, looking up via channels.list")
+                ch_resp = service.channels().list(
+                    part='contentDetails',
+                    id=channel_id
+                ).execute()
+                items = ch_resp.get('items', [])
+                if not items:
+                    return []
+                pid = items[0]['contentDetails']['relatedPlaylists']['uploads']
+                _uploads_playlist_cache[channel_id] = pid
+                resp = service.playlistItems().list(
+                    part='snippet',
+                    playlistId=pid,
+                    maxResults=10
+                ).execute()
+            else:
+                raise
 
         # Filter by publish date and collect video IDs
         video_ids = []
@@ -115,7 +136,7 @@ def fetch_recent_videos(service, channel_id, channel_name, hours_back=48,
                 'url': f"https://youtube.com/watch?v={item['id']}",
                 'thumbnail': snippet.get('thumbnails', {}).get('medium', {}).get('url', ''),
                 'view_count': int(stats.get('viewCount', 0)),
-                'description': snippet.get('description', '')[:500],
+                'description': snippet.get('description', '')[:5000],
             })
 
     except HttpError as e:
