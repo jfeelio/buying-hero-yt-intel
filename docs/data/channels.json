@@ -1,0 +1,164 @@
+{
+  "channels": [
+    {
+      "id": null,
+      "name": "Results Driven RE",
+      "handle": "@ResultsDrivenRE",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["wholesaling", "acquisitions", "scripts"]
+    },
+    {
+      "id": null,
+      "name": "BiggerPockets",
+      "handle": "@biggerpockets",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["investing", "analysis", "market trends"]
+    },
+    {
+      "id": null,
+      "name": "Flip with Rick",
+      "handle": "@flipwithrick",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["flipping", "renovation", "disposition"]
+    },
+    {
+      "id": null,
+      "name": "Brent Daniels - TTP",
+      "handle": "@brentdanielsrealestate",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["cold calling", "acquisitions", "scripts"]
+    },
+    {
+      "id": null,
+      "name": "Max Maxwell",
+      "handle": "@maxmaxwell",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["wholesaling", "deal flow"]
+    },
+    {
+      "id": null,
+      "name": "Jamil Damji",
+      "handle": "@jamildamji",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["novations", "assignments", "disposition"]
+    },
+    {
+      "id": null,
+      "name": "Jerry Norton",
+      "handle": "@jerrynorton",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["flipping", "ARV", "underwriting"]
+    },
+    {
+      "id": null,
+      "name": "Pace Morby",
+      "handle": "@pacemorby",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["subject-to", "creative finance", "seller scripts"]
+    },
+    {
+      "id": null,
+      "name": "Real Estate Skills",
+      "handle": "@realestateskills",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["wholesaling", "flipping", "training"]
+    },
+    {
+      "id": null,
+      "name": "Wholesaling Inc",
+      "handle": "@wholesalinginc",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["lead gen", "seller psychology", "wholesaling"]
+    },
+    {
+      "id": null,
+      "name": "Ryan Pineda",
+      "handle": "@ryanpineda",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["flipping", "scaling", "cash offers"]
+    },
+    {
+      "id": null,
+      "name": "DealMachine",
+      "handle": "@dealmachine",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["driving for dollars", "list building", "marketing"]
+    },
+    {
+      "id": null,
+      "name": "Carlos Reyes",
+      "handle": "@carlosreyes",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["acquisitions", "negotiations", "scripts"]
+    },
+    {
+      "id": null,
+      "name": "Sean Terry - Flip2Freedom",
+      "handle": "@flip2freedom",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["motivated sellers", "direct mail", "cold calling"]
+    },
+    {
+      "id": null,
+      "name": "Lex Levinrad",
+      "handle": "@lexlevinrad",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["south florida", "flipping", "wholesaling"]
+    },
+    {
+      "id": null,
+      "name": "REtipster",
+      "handle": "@retipster",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["data", "skip tracing", "list strategy"]
+    },
+    {
+      "id": null,
+      "name": "Clever Investor",
+      "handle": "@cleverinvestor",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["scripts", "objection handling", "seller psychology"]
+    },
+    {
+      "id": null,
+      "name": "Fortune Builders",
+      "handle": "@fortunebuilders",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["systems", "scaling", "buyer network"]
+    },
+    {
+      "id": null,
+      "name": "Kris Krohn",
+      "handle": "@kriskrohn",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["creative finance", "mindset", "seller psychology"]
+    },
+    {
+      "id": null,
+      "name": "Wholesale Hotline",
+      "handle": "@wholesalehotline",
+      "enabled": true,
+      "added": "2026-03-16",
+      "tags": ["wholesaling", "live deals", "market intel"]
+    }
+  ]
+}
