@@ -1,15 +1,15 @@
 {
   "channels": [
     {
-      "id": null,
+      "id": "UC3cBbUH3M-6s_kQZVf3nNZg",
       "name": "Results Driven RE",
-      "handle": "@ResultsDrivenRE",
+      "handle": "@ResultsDrivenREI",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["wholesaling", "acquisitions", "scripts"]
     },
     {
-      "id": null,
+      "id": "UCVWDbXqQ8cupuVpotWNt2eg",
       "name": "BiggerPockets",
       "handle": "@biggerpockets",
       "enabled": true,
@@ -17,7 +17,7 @@
       "tags": ["investing", "analysis", "market trends"]
     },
     {
-      "id": null,
+      "id": "UCrJwaBihSNoEV7y2NWth4Jw",
       "name": "Flip with Rick",
       "handle": "@flipwithrick",
       "enabled": true,
@@ -25,23 +25,23 @@
       "tags": ["flipping", "renovation", "disposition"]
     },
     {
-      "id": null,
+      "id": "UC-6z7xoEAfF885Up9axEKKw",
       "name": "Brent Daniels - TTP",
-      "handle": "@brentdanielsrealestate",
+      "handle": "@BrentDanielsTTP",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["cold calling", "acquisitions", "scripts"]
     },
     {
-      "id": null,
+      "id": "UCnkmQCJ4f6rRl1PXCblppvA",
       "name": "Max Maxwell",
-      "handle": "@maxmaxwell",
+      "handle": "@maxmaxwellyt",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["wholesaling", "deal flow"]
     },
     {
-      "id": null,
+      "id": "UCDqJP0mZNOSR9JiIRE02NxQ",
       "name": "Jamil Damji",
       "handle": "@jamildamji",
       "enabled": true,
@@ -49,15 +49,15 @@
       "tags": ["novations", "assignments", "disposition"]
     },
     {
-      "id": null,
-      "name": "Jerry Norton",
-      "handle": "@jerrynorton",
+      "id": "UCg2F6yUPM89HPnOw98FTk9Q",
+      "name": "Flipping Mastery (Jerry Norton)",
+      "handle": "@FlippingMastery",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["flipping", "ARV", "underwriting"]
     },
     {
-      "id": null,
+      "id": "UCRkUNGepO8YnTFHSj7urWsQ",
       "name": "Pace Morby",
       "handle": "@pacemorby",
       "enabled": true,
@@ -65,15 +65,15 @@
       "tags": ["subject-to", "creative finance", "seller scripts"]
     },
     {
-      "id": null,
+      "id": "UCdjEFkZWl9eBgV8azx1A_hg",
       "name": "Real Estate Skills",
-      "handle": "@realestateskills",
+      "handle": "@RealEstateSkills",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["wholesaling", "flipping", "training"]
     },
     {
-      "id": null,
+      "id": "UC97xUngm6A2FwC_io4HhDSg",
       "name": "Wholesaling Inc",
       "handle": "@wholesalinginc",
       "enabled": true,
@@ -81,63 +81,63 @@
       "tags": ["lead gen", "seller psychology", "wholesaling"]
     },
     {
-      "id": null,
+      "id": "UCZc5ImWILZmnxxA-RNgTY-Q",
       "name": "Ryan Pineda",
-      "handle": "@ryanpineda",
+      "handle": "@RyanPineda",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["flipping", "scaling", "cash offers"]
     },
     {
-      "id": null,
+      "id": "UCqLNBLj_p6wzLrJe7EA1gIA",
       "name": "DealMachine",
-      "handle": "@dealmachine",
+      "handle": "@DealMachine",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["driving for dollars", "list building", "marketing"]
     },
     {
-      "id": null,
+      "id": "UCa74bvIYGo3X0BCbtqbsbPA",
       "name": "Carlos Reyes",
-      "handle": "@carlosreyes",
+      "handle": "@OfficialCarlosReyes",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["acquisitions", "negotiations", "scripts"]
     },
     {
-      "id": null,
+      "id": "UCTY59xsqZ5wRKpyDXlER2_A",
       "name": "Sean Terry - Flip2Freedom",
-      "handle": "@flip2freedom",
+      "handle": "@SeanTerry",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["motivated sellers", "direct mail", "cold calling"]
     },
     {
-      "id": null,
+      "id": "UCSBmgy71iroES5MtvpSgADQ",
       "name": "Lex Levinrad",
-      "handle": "@lexlevinrad",
+      "handle": "@LexLevinrad",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["south florida", "flipping", "wholesaling"]
     },
     {
-      "id": null,
+      "id": "UC4f3qDE9qKqoRy5_9R6y_pw",
       "name": "REtipster",
-      "handle": "@retipster",
+      "handle": "@REtipster",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["data", "skip tracing", "list strategy"]
     },
     {
-      "id": null,
-      "name": "Clever Investor",
+      "id": "UCvWdtRovlbUvCu9ZCw8b0aQ",
+      "name": "Clever Investor (Cody Sperber)",
       "handle": "@cleverinvestor",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["scripts", "objection handling", "seller psychology"]
     },
     {
-      "id": null,
+      "id": "UCrvtCEG_NCcTJ3kMpYc-e6Q",
       "name": "Fortune Builders",
       "handle": "@fortunebuilders",
       "enabled": true,
@@ -145,20 +145,12 @@
       "tags": ["systems", "scaling", "buyer network"]
     },
     {
-      "id": null,
+      "id": "UCokIq0eihRhkiqClyV0WCdw",
       "name": "Kris Krohn",
-      "handle": "@kriskrohn",
+      "handle": "@KrisKrohn",
       "enabled": true,
       "added": "2026-03-16",
       "tags": ["creative finance", "mindset", "seller psychology"]
-    },
-    {
-      "id": null,
-      "name": "Wholesale Hotline",
-      "handle": "@wholesalehotline",
-      "enabled": true,
-      "added": "2026-03-16",
-      "tags": ["wholesaling", "live deals", "market intel"]
     }
   ]
 }
