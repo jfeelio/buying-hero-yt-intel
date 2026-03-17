@@ -6,6 +6,9 @@ from googleapiclient.errors import HttpError
 
 API_KEY = os.environ.get('YOUTUBE_API_KEY')
 
+# Cache uploads playlist IDs to avoid repeat channels.list calls
+_uploads_playlist_cache = {}
+
 
 def get_service():
     return build('youtube', 'v3', developerKey=API_KEY)
@@ -30,28 +33,71 @@ def resolve_channel_id(service, channel):
     return None
 
 
-def fetch_recent_videos(service, channel_id, channel_name, hours_back=48):
-    """Fetch videos published in the last N hours for a channel."""
-    published_after = (
-        datetime.now(timezone.utc) - timedelta(hours=hours_back)
-    ).strftime('%Y-%m-%dT%H:%M:%SZ')
+def _get_uploads_playlist_id(service, channel_id, uploads_playlist_id=None):
+    """Get the uploads playlist ID for a channel.
+
+    If uploads_playlist_id is pre-supplied (from channels.json), uses it for
+    free (0 quota). Otherwise falls back to channels.list (1 quota unit).
+
+    The uploads playlist ID is deterministically: 'UU' + channel_id[2:]
+    but we accept an explicit value to be safe.
+    """
+    if uploads_playlist_id:
+        return uploads_playlist_id
+    if channel_id in _uploads_playlist_cache:
+        return _uploads_playlist_cache[channel_id]
+    # Derive it from the channel ID (UC -> UU prefix swap)
+    derived = 'UU' + channel_id[2:]
+    _uploads_playlist_cache[channel_id] = derived
+    return derived
+
+
+def fetch_recent_videos(service, channel_id, channel_name, hours_back=48,
+                        uploads_playlist_id=None):
+    """Fetch videos published in the last N hours for a channel.
+
+    Uses playlistItems.list (1 quota unit) instead of search.list (100 units).
+    If uploads_playlist_id is provided (from channels.json), costs only
+    1 unit (playlistItems.list) + 1 unit (videos.list) = 2 units per channel.
+    """
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours_back)
+
+    # Step 1: Get uploads playlist ID (0 quota if pre-supplied, else derived)
+    pid = _get_uploads_playlist_id(service, channel_id, uploads_playlist_id)
+    if not pid:
+        return []
 
     videos = []
     try:
-        resp = service.search().list(
-            part='id,snippet',
-            channelId=channel_id,
-            publishedAfter=published_after,
-            type='video',
-            order='date',
+        # Step 2: Fetch most recent items from uploads playlist (1 quota unit)
+        resp = service.playlistItems().list(
+            part='snippet',
+            playlistId=pid,
             maxResults=10
         ).execute()
 
-        video_ids = [item['id']['videoId'] for item in resp.get('items', [])]
+        # Filter by publish date and collect video IDs
+        video_ids = []
+        for item in resp.get('items', []):
+            snippet = item.get('snippet', {})
+            published_at = snippet.get('publishedAt', '')
+            if not published_at:
+                continue
+            try:
+                pub_dt = datetime.fromisoformat(published_at.replace('Z', '+00:00'))
+                if pub_dt < cutoff:
+                    continue  # Older than our window — playlist is date-sorted so we can stop
+            except Exception:
+                continue
+            resource = snippet.get('resourceId', {})
+            vid_id = resource.get('videoId')
+            if vid_id:
+                video_ids.append(vid_id)
+
         if not video_ids:
             return []
 
-        # Fetch view counts + stats
+        # Step 3: Fetch view counts + stats for found video IDs (1 quota unit)
         stats_resp = service.videos().list(
             part='statistics,snippet',
             id=','.join(video_ids)

@@ -1,10 +1,32 @@
 {
-  "last_updated": null,
-  "days_tracked": 0,
-  "total_videos_analyzed": 0,
-  "top_acquisition_lines": [],
-  "top_disposition_lines": [],
-  "evergreen_lessons": [],
-  "rolling_themes": [],
-  "channel_activity": {}
+  "last_updated": "2026-03-17T19:21:01.661791+00:00",
+  "days_tracked": 1,
+  "total_videos_analyzed": 1,
+  "top_acquisition_lines": [
+    "We buy houses in any condition \u2014 hoarder houses, outdated kitchens, major repairs needed \u2014 we handle all of that so you don't have to.",
+    "A lot of sellers are surprised that we can close fast and pay cash even on properties that need a lot of work \u2014 that's actually our specialty.",
+    "You don't need to fix anything, clean anything, or even move everything out \u2014 we make it simple so you can move on with your life.",
+    "I understand you may have gotten other offers \u2014 the difference with us is we close on your timeline and there are no surprises at the closing table.",
+    "Even if the house has issues other buyers walked away from, we've seen it all \u2014 we're not going to back out once we have a deal in place."
+  ],
+  "top_disposition_lines": [
+    "We have a cosmetic flip under contract with solid ARV upside \u2014 ideal for an investor who wants a straightforward value-add without a full gut rehab.",
+    "This deal fits the BRRRR model perfectly \u2014 strong rental market in the area, you could pull most of your capital back out on the refi.",
+    "We're bringing this to you first before it hits our full buyer list \u2014 the numbers work for a flip or a hold, and we can assign quickly."
+  ],
+  "evergreen_lessons": [
+    "BRRRR strategy allows equity recycling \u2014 relevant for educating sellers on why their property qualifies for a fast cash offer even in rough condition",
+    "Private money is accessible even for beginners \u2014 Buying Hero can pitch JV/private lender relationships to close deals without hard money delays",
+    "HELOCs on existing equity can fund acquisitions \u2014 useful talking point when sellers ask how buyers like Buying Hero fund deals so quickly",
+    "Overpaying by $20K on a first deal still worked out \u2014 reinforces that motivated sellers who take slightly below market still benefit, and buyers absorb risk",
+    "Hoarder houses, cosmetic disasters, and distressed properties are opportunity, not obstacle \u2014 cold call lists targeting these property types are validated here"
+  ],
+  "rolling_themes": [
+    "Private money lending is increasingly accessible to everyday investors, signaling a larger pool of potential capital partners for wholesalers to tap",
+    "BRRRR and HELOC strategies are mainstream, meaning more retail buyers/landlords are actively seeking distressed deals \u2014 expanding the buyer pool for assignments",
+    "Nurse/W-2 professional investor archetype is growing \u2014 this demographic is a motivated seller profile when life transitions (divorce, relocation, burnout) occur"
+  ],
+  "channel_activity": {
+    "BiggerPockets": 1
+  }
 }

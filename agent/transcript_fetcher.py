@@ -1,5 +1,6 @@
 import time
-from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
+from youtube_transcript_api import YouTubeTranscriptApi
+from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFound
 
 MAX_CHARS = 80000
 
@@ -7,23 +8,28 @@ MAX_CHARS = 80000
 def fetch_transcript(video_id):
     """
     Fetch transcript for a video. Returns (text, available) tuple.
-    Uses 60/20 heuristic for long transcripts.
+    Compatible with youtube-transcript-api v1.x
     """
     try:
         time.sleep(1)  # polite rate limiting
-        transcript_list = YouTubeTranscriptApi.get_transcript(
-            video_id,
-            languages=['en', 'en-US', 'en-GB']
-        )
-        text = ' '.join(seg['text'] for seg in transcript_list)
+        ytt_api = YouTubeTranscriptApi()
+        fetched = ytt_api.fetch(video_id, languages=['en', 'en-US', 'en-GB'])
+        text = ' '.join(seg.text for seg in fetched)
         text = _truncate(text)
         return text, True
 
     except (TranscriptsDisabled, NoTranscriptFound):
         return None, False
     except Exception as e:
-        print(f"  [WARN] Transcript error for {video_id}: {e}")
-        return None, False
+        # Fallback: try without language filter
+        try:
+            ytt_api = YouTubeTranscriptApi()
+            fetched = ytt_api.fetch(video_id)
+            text = ' '.join(seg.text for seg in fetched)
+            return _truncate(text), True
+        except Exception:
+            print(f"  [WARN] Transcript error for {video_id}: {e}")
+            return None, False
 
 
 def _truncate(text):

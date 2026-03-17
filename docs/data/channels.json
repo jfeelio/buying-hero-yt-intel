@@ -2,6 +2,7 @@
   "channels": [
     {
       "id": "UC3cBbUH3M-6s_kQZVf3nNZg",
+      "uploads_playlist_id": "UU3cBbUH3M-6s_kQZVf3nNZg",
       "name": "Results Driven RE",
       "handle": "@ResultsDrivenREI",
       "enabled": true,
@@ -10,6 +11,7 @@
     },
     {
       "id": "UCVWDbXqQ8cupuVpotWNt2eg",
+      "uploads_playlist_id": "UUVWDbXqQ8cupuVpotWNt2eg",
       "name": "BiggerPockets",
       "handle": "@biggerpockets",
       "enabled": true,
@@ -18,6 +20,7 @@
     },
     {
       "id": "UCrJwaBihSNoEV7y2NWth4Jw",
+      "uploads_playlist_id": "UUrJwaBihSNoEV7y2NWth4Jw",
       "name": "Flip with Rick",
       "handle": "@flipwithrick",
       "enabled": true,
@@ -26,6 +29,7 @@
     },
     {
       "id": "UC-6z7xoEAfF885Up9axEKKw",
+      "uploads_playlist_id": "UU-6z7xoEAfF885Up9axEKKw",
       "name": "Brent Daniels - TTP",
       "handle": "@BrentDanielsTTP",
       "enabled": true,
@@ -34,6 +38,7 @@
     },
     {
       "id": "UCnkmQCJ4f6rRl1PXCblppvA",
+      "uploads_playlist_id": "UUnkmQCJ4f6rRl1PXCblppvA",
       "name": "Max Maxwell",
       "handle": "@maxmaxwellyt",
       "enabled": true,
@@ -42,6 +47,7 @@
     },
     {
       "id": "UCDqJP0mZNOSR9JiIRE02NxQ",
+      "uploads_playlist_id": "UUDqJP0mZNOSR9JiIRE02NxQ",
       "name": "Jamil Damji",
       "handle": "@jamildamji",
       "enabled": true,
@@ -50,6 +56,7 @@
     },
     {
       "id": "UCg2F6yUPM89HPnOw98FTk9Q",
+      "uploads_playlist_id": "UUg2F6yUPM89HPnOw98FTk9Q",
       "name": "Flipping Mastery (Jerry Norton)",
       "handle": "@FlippingMastery",
       "enabled": true,
@@ -58,6 +65,7 @@
     },
     {
       "id": "UCRkUNGepO8YnTFHSj7urWsQ",
+      "uploads_playlist_id": "UURkUNGepO8YnTFHSj7urWsQ",
       "name": "Pace Morby",
       "handle": "@pacemorby",
       "enabled": true,
@@ -66,6 +74,7 @@
     },
     {
       "id": "UCdjEFkZWl9eBgV8azx1A_hg",
+      "uploads_playlist_id": "UUdjEFkZWl9eBgV8azx1A_hg",
       "name": "Real Estate Skills",
       "handle": "@RealEstateSkills",
       "enabled": true,
@@ -74,6 +83,7 @@
     },
     {
       "id": "UC97xUngm6A2FwC_io4HhDSg",
+      "uploads_playlist_id": "UU97xUngm6A2FwC_io4HhDSg",
       "name": "Wholesaling Inc",
       "handle": "@wholesalinginc",
       "enabled": true,
@@ -82,6 +92,7 @@
     },
     {
       "id": "UCZc5ImWILZmnxxA-RNgTY-Q",
+      "uploads_playlist_id": "UUZc5ImWILZmnxxA-RNgTY-Q",
       "name": "Ryan Pineda",
       "handle": "@RyanPineda",
       "enabled": true,
@@ -90,6 +101,7 @@
     },
     {
       "id": "UCqLNBLj_p6wzLrJe7EA1gIA",
+      "uploads_playlist_id": "UUqLNBLj_p6wzLrJe7EA1gIA",
       "name": "DealMachine",
       "handle": "@DealMachine",
       "enabled": true,
@@ -98,6 +110,7 @@
     },
     {
       "id": "UCa74bvIYGo3X0BCbtqbsbPA",
+      "uploads_playlist_id": "UUa74bvIYGo3X0BCbtqbsbPA",
       "name": "Carlos Reyes",
       "handle": "@OfficialCarlosReyes",
       "enabled": true,
@@ -106,6 +119,7 @@
     },
     {
       "id": "UCTY59xsqZ5wRKpyDXlER2_A",
+      "uploads_playlist_id": "UUTY59xsqZ5wRKpyDXlER2_A",
       "name": "Sean Terry - Flip2Freedom",
       "handle": "@SeanTerry",
       "enabled": true,
@@ -114,6 +128,7 @@
     },
     {
       "id": "UCSBmgy71iroES5MtvpSgADQ",
+      "uploads_playlist_id": "UUSBmgy71iroES5MtvpSgADQ",
       "name": "Lex Levinrad",
       "handle": "@LexLevinrad",
       "enabled": true,
@@ -122,6 +137,7 @@
     },
     {
       "id": "UC4f3qDE9qKqoRy5_9R6y_pw",
+      "uploads_playlist_id": "UU4f3qDE9qKqoRy5_9R6y_pw",
       "name": "REtipster",
       "handle": "@REtipster",
       "enabled": true,
@@ -130,6 +146,7 @@
     },
     {
       "id": "UCvWdtRovlbUvCu9ZCw8b0aQ",
+      "uploads_playlist_id": "UUvWdtRovlbUvCu9ZCw8b0aQ",
       "name": "Clever Investor (Cody Sperber)",
       "handle": "@cleverinvestor",
       "enabled": true,
@@ -138,6 +155,7 @@
     },
     {
       "id": "UCrvtCEG_NCcTJ3kMpYc-e6Q",
+      "uploads_playlist_id": "UUrvtCEG_NCcTJ3kMpYc-e6Q",
       "name": "Fortune Builders",
       "handle": "@fortunebuilders",
       "enabled": true,
@@ -146,6 +164,7 @@
     },
     {
       "id": "UCokIq0eihRhkiqClyV0WCdw",
+      "uploads_playlist_id": "UUokIq0eihRhkiqClyV0WCdw",
       "name": "Kris Krohn",
       "handle": "@KrisKrohn",
       "enabled": true,

@@ -58,7 +58,8 @@ def main():
         ch['id'] = channel_id
 
         print(f"  Checking: {ch['name']} ({channel_id})")
-        videos = fetch_recent_videos(service, channel_id, ch['name'])
+        videos = fetch_recent_videos(service, channel_id, ch['name'],
+                                     uploads_playlist_id=ch.get('uploads_playlist_id'))
         new_videos = [
             v for v in videos
             if is_new(v['video_id'], v['published_at'], seen_ids)
