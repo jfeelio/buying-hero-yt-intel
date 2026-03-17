@@ -1,0 +1,44 @@
+name: Daily YouTube Intelligence Run
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-agent:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run agent
+        working-directory: agent
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
+        run: python main.py
+
+      - name: Commit and push data
+        run: |
+          git config user.name "Buying Hero Bot"
+          git config user.email "bot@buyinghero.com"
+          git add docs/data/
+          $status = git status --porcelain docs/data/
+          if ($status) {
+            $today = python -c "from datetime import datetime, timezone; print(datetime.now(timezone.utc).strftime('%Y-%m-%d'))"
+            git commit -m "Daily intel update $today"
+            git push
+          } else {
+            Write-Host "No changes to commit"
+          }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buying Hero — YT Intelligence</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">🏠</span>
+        <div>
+          <h1>Buying Hero Intel</h1>
+          <p class="brand-sub">Real Estate Wholesaling Intelligence</p>
+        </div>
+      </div>
+      <nav>
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="daily">Daily Feed</button>
+        <button class="tab-btn" data-tab="channels">Channels</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="stale-banner" class="stale-banner hidden">
+    ⚠️ Data may be outdated — last update was more than 36 hours ago. The daily agent may have encountered an error.
+  </div>
+
+  <main id="content">
+    <div class="loading">Loading intelligence data...</div>
+  </main>
+
+  <footer>
+    <span id="last-updated-footer"></span>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/overview.js"></script>
+  <script src="js/daily.js"></script>
+  <script src="js/channels.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
