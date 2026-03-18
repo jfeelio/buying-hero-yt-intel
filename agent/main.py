@@ -100,6 +100,9 @@ def main():
                 continue
             print(f"    [INFO] No transcript — analyzing description ({len(description)} chars)")
             transcript = f"[Video description only — no transcript available]\n\n{description}"
+            video['content_source'] = 'description'
+        else:
+            video['content_source'] = 'transcript'
 
         insights = analyze_video(video['title'], video['channel'], transcript, call_number=claude_calls)
         claude_calls += 1

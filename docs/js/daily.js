@@ -163,7 +163,11 @@ function renderVideoCard(video) {
           <div class="video-stats">
             <span>👁 ${formatViews(video.view_count || 0)}</span>
             <span>🕐 ${timeAgo(video.published_at)}</span>
-            ${video.transcript_available === false ? '<span style="color:var(--text3)">⚠️ No transcript</span>' : ''}
+            ${video.transcript_available === false
+              ? (video.content_source === 'description' || video.insights
+                  ? '<span style="color:var(--text3)" title="Analyzed using video description">📄 Description only</span>'
+                  : '<span style="color:var(--text3)">⚠️ No transcript</span>')
+              : ''}
           </div>
         </div>
         <div>
@@ -201,7 +205,7 @@ function renderVideoCard(video) {
         <div class="video-insights" id="insights-${escHtml(video.video_id)}">
           <p style="color:var(--text3);font-size:13px;">
             ${video.transcript_available === false
-              ? 'No transcript available — analysis skipped.'
+              ? 'No transcript available and no usable description — analysis skipped.'
               : 'This video was skipped due to low wholesaling relevance.'}
           </p>
           <a class="video-link" href="${escHtml(video.url)}" target="_blank" rel="noopener">▶ Watch on YouTube →</a>
