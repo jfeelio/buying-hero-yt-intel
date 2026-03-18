@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   run-agent:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repo
@@ -18,12 +18,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 1
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -33,6 +27,8 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PYTHONIOENCODING: utf-8
+          PYTHONUTF8: "1"
         run: python main.py
 
       - name: Commit and push data
@@ -40,5 +36,5 @@ jobs:
           git config user.name "Buying Hero Bot"
           git config user.email "bot@buyinghero.com"
           git add docs/data/
-          git diff --cached --quiet || git commit -m "Daily intel update $(date -u +%Y-%m-%d)"
-          git push
+          $status = git status --porcelain
+          if ($status) { git commit -m "Daily intel update $(Get-Date -Format yyyy-MM-dd)"; git push }
