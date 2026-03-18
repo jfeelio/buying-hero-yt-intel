@@ -66,8 +66,18 @@ async function renderDayContent(content) {
     ${dayData.daily_themes?.length ? `
       <div class="section card" style="margin-bottom:20px;">
         <div class="card-title"><span class="icon">📈</span> Today's Themes</div>
-        <div class="theme-tags">
-          ${dayData.daily_themes.map(t => `<span class="theme-tag">${escHtml(t)}</span>`).join('')}
+        <div class="theme-list">
+          ${dayData.daily_themes.map(t => {
+            const theme = typeof t === 'string' ? t : t.theme;
+            const url = t?.video_url || null;
+            const title = t?.video_title || null;
+            const channel = t?.channel || null;
+            return `
+              <div class="theme-item">
+                <span class="theme-tag">${escHtml(theme)}</span>
+                ${url ? `<a class="theme-source" href="${escHtml(url)}" target="_blank" rel="noopener">▶ ${escHtml(channel)} — ${escHtml(title)}</a>` : ''}
+              </div>`;
+          }).join('')}
         </div>
       </div>
     ` : ''}

@@ -212,6 +212,15 @@ main {
   border-radius: 20px;
   font-size: 12px;
 }
+.theme-list { display: flex; flex-direction: column; gap: 10px; }
+.theme-item { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.theme-source {
+  font-size: 11px;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.85;
+}
+.theme-source:hover { opacity: 1; text-decoration: underline; }
 
 /* ── Stats Bar ── */
 .stats-bar {

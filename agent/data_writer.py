@@ -115,9 +115,19 @@ def _dedupe(items):
 
 def _extract_themes(videos):
     themes = []
+    seen = set()
     for vid in videos:
-        themes.extend(vid.get('insights', {}).get('trends', []))
-    return _dedupe(themes)[:6]
+        for trend in vid.get('insights', {}).get('trends', []):
+            key = trend.strip().lower()
+            if key not in seen and len(trend.strip()) > 10:
+                seen.add(key)
+                themes.append({
+                    'theme': trend.strip(),
+                    'video_title': vid.get('title', ''),
+                    'video_url': vid.get('url', ''),
+                    'channel': vid.get('channel', ''),
+                })
+    return themes[:6]
 
 
 def _extract_top_lessons(videos):
