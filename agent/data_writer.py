@@ -74,7 +74,10 @@ def rebuild_overview(max_days=30):
             day = json.load(f)
 
         total_videos += day.get('videos_analyzed', 0)
-        all_themes.extend(day.get('daily_themes', []))
+        all_themes.extend(
+            t['theme'] if isinstance(t, dict) else t
+            for t in day.get('daily_themes', [])
+        )
 
         for vid in day.get('videos', []):
             insights = vid.get('insights', {})
